@@ -1,7 +1,7 @@
 export const siteMetadata = {
   title: "Arkar Min (Kei)",
   author: "Arkar Min (Kei)",
-  siteUrl: "https://adarsha.dev",
+  siteUrl: "https://arkarmin-dev.vercel.app/",
   socialBanner: "/_static/default-og-card.png",
   description:
     "Arkar Min (Kei) - Software developer passionate about creating and sharing things on internet about Backend development and general programming concepts",
