@@ -14,13 +14,13 @@ export const metadata = generatePageMetadata({
 export default function Projects() {
   return (
     <React.Fragment>
-      <section>
+      {/* <section>
         <h1 className="mb-4 text-center text-2xl font-bold tracking-tighter">
           Coming Soon...
         </h1>
-      </section>
+      </section> */}
 
-      {/* <section>
+      <section>
         <h1 className="mb-4 text-2xl font-bold tracking-tighter">Web apps</h1>
         <div
           role="list"
@@ -30,7 +30,7 @@ export default function Projects() {
             <ProjectCard project={project} key={idx} />
           ))}
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="py-10">
         <h1 className="mb-4 text-2xl font-bold tracking-tighter">Tools</h1>

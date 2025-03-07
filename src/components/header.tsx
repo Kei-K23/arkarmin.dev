@@ -3,18 +3,20 @@
 import { usePathname } from "next/navigation";
 import { ThemeToggler } from "./theme-toggle";
 import React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-// const navItems = {
-//   "/": {
-//     name: "home",
-//   },
-//   "/blog": {
-//     name: "blog",
-//   },
-//   "/projects": {
-//     name: "projects",
-//   },
-// };
+const navItems = {
+  "/": {
+    name: "home",
+  },
+  // "/blog": {
+  //   name: "blog",
+  // },
+  "/projects": {
+    name: "projects",
+  },
+};
 
 export function Header() {
   let pathname = usePathname() || "/";
@@ -31,7 +33,7 @@ export function Header() {
             id="nav"
           >
             <div className="flex w-full flex-row justify-between items-center">
-              {/* <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between">
                 {Object.entries(navItems).map(([path, { name }]) => {
                   const isActive = path === pathname;
                   return (
@@ -47,7 +49,7 @@ export function Header() {
                     </Link>
                   );
                 })}
-              </div> */}
+              </div>
 
               <div className="ml-auto">
                 <ThemeToggler />

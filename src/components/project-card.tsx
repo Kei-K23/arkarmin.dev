@@ -1,8 +1,8 @@
 import { GitHubIcon } from "@/components/icons";
 import { SocialLink } from "@/components/social-link";
 import { WEB_APPS } from "@/data/projects";
-import Image from "next/image";
 import { ZoomableImage } from "./zoomable-image";
+import { Globe2 } from "lucide-react";
 
 type Props = {
   project: (typeof WEB_APPS)[number];
@@ -39,12 +39,20 @@ export const ProjectCard = ({ project }: Props) => {
             </p>
           ))}
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-x-2">
           <SocialLink
             icon={GitHubIcon}
             href={project.repo}
             className="h-6 w-6 flex-none"
           />
+          {project.demo && (
+            <SocialLink
+              icon={Globe2}
+              href={project.demo}
+              className="h-6 w-6 flex-none"
+              iconClassName="fill-black-200 hover:fill-0 stroke-zinc-500 hover:stroke-zinc-200"
+            />
+          )}
         </div>
       </div>
     </div>
